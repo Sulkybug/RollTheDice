@@ -1,8 +1,8 @@
 import { useState } from "react";
-import dices from "./assets/Components/Dices.jsx";
+import dices from "./Components/Dices.jsx";
 import "./App.css";
 import Select from "react-select";
-import { ImgDices } from "./assets/Components/imgDices.jsx";
+import { ImgDices } from "./Components/imgDices.jsx";
 
 function App() {
   const optionsDices = [
