@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Days+One&display=swap");
 
 body {
@@ -15,7 +14,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "Press Start 2P", cursive;
   font-family: "Days One", sans-serif;
   color: aliceblue;
   width: 100vw;
