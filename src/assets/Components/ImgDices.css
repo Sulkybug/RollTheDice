@@ -1,0 +1,52 @@
+.dicesBox {
+  display: flex;
+  flex-direction: row;
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(rgba(255, 255, 255, 0.575) 20%, rgb(0, 49, 0)),
+    url(/img/marbleTable.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  width: 80vw;
+}
+
+img {
+  filter: drop-shadow(10px 10px 10px white);
+  display: flex;
+}
+
+@media only screen and (max-width: 1200px) {
+  img {
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  img {
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  img {
+    width: 160px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  img {
+    width: 140px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  img {
+    width: 130px;
+  }
+
+  .dicesBox {
+    width: 90vw;
+  }
+}

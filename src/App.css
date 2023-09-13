@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Days+One&display=swap");
+
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background: radial-gradient(white 5%, rgb(0, 31, 0));
+
+  background: rgb(0, 49, 0);
+  background: linear-gradient(62deg, #101011 0%, rgb(0, 49, 0) 20%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Press Start 2P", cursive;
+  font-family: "Days One", sans-serif;
+  color: aliceblue;
+  width: 100vw;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#NumbOfDices,
+#typeofDices {
+  color: black;
+  width: 180px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  background-color: rgba(240, 248, 255, 0.719);
+}
+
+button {
+  font-size: large;
+  font-family: "Days One", sans-serif;
+  border-radius: 15px;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  scale: 1.1;
+  transition: 0.3s ease-in-out;
+  background-color: salmon;
+  color: aliceblue;
+  cursor: pointer;
+  border: 3px solid yellow;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: flex;
+}
+
+@media only screen and (max-width: 1000px) {
+}
