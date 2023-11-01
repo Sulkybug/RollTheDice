@@ -120,15 +120,7 @@ function App() {
         NumbOfDices={NumbOfDices}
         diceThree={diceThree}
       />
-      <h1>Total = {sumTotal()}</h1>
-      <h2
-        className={
-          (NumbOfDices == 1) | (NumbOfDices == 3) ? "hidden" : "visible"
-        }
-      >
-        {diceOne == diceTwo ? "Pair" : "-"}
-      </h2>
-      <button onClick={throwDice}>Roll The Dice</button>
+
       <Select
         name="typeofDices"
         id="typeofDices"
@@ -143,6 +135,16 @@ function App() {
         onChange={changeDices}
         placeholder="Numb of 🎲"
       />
+
+      <button onClick={throwDice}>Roll The Dice</button>
+      <h1>Total = {sumTotal()}</h1>
+      <h2
+        className={
+          (NumbOfDices == 1) | (NumbOfDices == 3) ? "hidden" : "visible"
+        }
+      >
+        {diceOne == diceTwo ? "Pair" : "-"}
+      </h2>
     </>
   );
 }

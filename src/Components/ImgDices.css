@@ -9,12 +9,13 @@
   background-size: cover;
   background-position: center;
   border-radius: 20px;
-  width: 80vw;
+  width: 65vw;
 }
 
 img {
   filter: drop-shadow(10px 10px 10px white);
   display: flex;
+  width: 280px;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -43,10 +44,11 @@ img {
 
 @media only screen and (max-width: 540px) {
   img {
-    width: 130px;
+    width: 100px;
   }
 
   .dicesBox {
     width: 90vw;
+    height: 50vh;
   }
 }
