@@ -81,8 +81,8 @@ function App() {
     let interval = 500;
     let audioEffectOne = new Audio();
     let audioEffect = new Audio();
-    audioEffect.src = "/audio/SoundEffectsDices.mp3";
-    audioEffectOne.src = "/audio/OneDiceSound.mp3";
+    audioEffect.src = "/RollTheDice/audio/SoundEffectsDices.mp3";
+    audioEffectOne.src = "/RollTheDice/audio/OneDiceSound.mp3";
     for (let i = 0; i < 15; i++) {
       setTimeout(() => {
         if ((i = 1)) {
