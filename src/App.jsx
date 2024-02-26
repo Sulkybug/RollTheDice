@@ -162,9 +162,11 @@ function App() {
         diceTwo == diceThree &&
         NumbOfDices == 3
           ? "🎲Triplet🎲"
+          : diceOne == diceTwo && NumbOfDices == 2
+          ? "🎲Doublet🎲"
           : (diceOne == diceTwo) |
               (diceOne == diceThree) |
-              (diceTwo == diceThree) && NumbOfDices == 2
+              (diceTwo == diceThree) && NumbOfDices == 3
           ? "🎲Doublet🎲"
           : "-"}
       </h2>
