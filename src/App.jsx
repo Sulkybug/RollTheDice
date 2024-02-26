@@ -6,9 +6,9 @@ import { ImgDices } from "./Components/imgDices.jsx";
 
 function App() {
   const optionsDices = [
-    { value: 1, label: "One" },
-    { value: 2, label: "Two" },
-    { value: 3, label: "Three" },
+    { value: 1, label: "One 🎲" },
+    { value: 2, label: "Two 🎲" },
+    { value: 3, label: "Three 🎲" },
   ];
 
   const diceType = [
@@ -29,8 +29,29 @@ function App() {
     Number(`${Object.values(dices)[0]}`)
   );
 
-  const [NumbOfDices, setNumbOfDices] = useState(1);
   const [NumbOfSides, setNumbOfSides] = useState(6);
+  const [NumbOfDices, setNumbOfDices] = useState(1);
+
+  const [buttonStatus, setButtonStatus] = useState(false);
+
+  const changeSides = (e) => {
+    setNumbOfSides(e.value);
+    if (e.value == 4) {
+      setDiceOne(Object.keys(dices)[6]);
+      setDiceOneVal(Object.values(dices)[6]);
+      setDiceTwo(Object.keys(dices)[6]);
+      setDiceTwoVal(Object.values(dices)[6]);
+      setDiceThree(Object.keys(dices)[6]);
+      setDiceThreeVal(Object.values(dices)[6]);
+    } else {
+      setDiceOne(Object.keys(dices)[0]);
+      setDiceOneVal(Object.values(dices)[0]);
+      setDiceTwo(Object.keys(dices)[0]);
+      setDiceTwoVal(Object.values(dices)[0]);
+      setDiceThree(Object.keys(dices)[0]);
+      setDiceThreeVal(Object.values(dices)[0]);
+    }
+  };
 
   const changeDices = (e) => {
     setNumbOfDices(e.value);
@@ -47,19 +68,8 @@ function App() {
     }
   };
 
-  const changeSides = (e) => {
-    setNumbOfSides(e.value);
-    setNumbOfDices(1);
-    if (e.value == 4) {
-      setDiceOne(Object.keys(dices)[6]);
-      setDiceOneVal(Object.values(dices)[6]);
-    } else {
-      setDiceOne(Object.keys(dices)[0]);
-      setDiceOneVal(Object.values(dices)[0]);
-    }
-  };
-
   const throwDice = () => {
+    setButtonStatus(true);
     let x = random();
     animationDices(setDiceOne, setDiceOneVal, x);
 
@@ -98,6 +108,7 @@ function App() {
     setTimeout(() => {
       setDiceNum(Object.keys(dices)[letter]);
       setDiceNumVal(Object.values(dices)[letter]);
+      setButtonStatus(false);
     }, (interval += 100));
   };
 
@@ -136,14 +147,21 @@ function App() {
         placeholder="Numb of 🎲"
       />
 
-      <button onClick={throwDice}>Roll The Dice</button>
-      <h1>Total = {sumTotal()}</h1>
+      <button
+        onClick={() => {
+          throwDice();
+        }}
+        disabled={buttonStatus}
+      >
+        Roll The Dice
+      </button>
+      <h1>Total : {sumTotal()}</h1>
       <h2
         className={
           (NumbOfDices == 1) | (NumbOfDices == 3) ? "hidden" : "visible"
         }
       >
-        {diceOne == diceTwo ? "Pair" : "-"}
+        {diceOne == diceTwo ? "🎲Doublet🎲" : " "}
       </h2>
     </>
   );

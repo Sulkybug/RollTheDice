@@ -23,6 +23,16 @@ body {
   flex-direction: column;
 }
 
+h1,
+h2 {
+  color: rgba(255, 255, 0, 0.918);
+  filter: drop-shadow(10px 10px 4px rgb(0, 37, 0));
+}
+
+h2 {
+  margin-top: 0;
+}
+
 #NumbOfDices,
 #typeofDices {
   color: black;
@@ -41,11 +51,12 @@ button {
   width: 180px;
   font-size: 20px;
   background-color: rgba(255, 255, 0, 0.521);
+  filter: drop-shadow(10px 10px 4px rgb(0, 37, 0));
 }
 
 button:hover {
   scale: 1.1;
-  transition: 0.3s ease-in-out;
+  transition: 0.4s ease-in-out;
   background-color: rgb(255, 95, 78);
   color: aliceblue;
   cursor: pointer;
