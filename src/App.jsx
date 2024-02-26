@@ -156,12 +156,17 @@ function App() {
         Roll The Dice
       </button>
       <h1>Total : {sumTotal()}</h1>
-      <h2
-        className={
-          (NumbOfDices == 1) | (NumbOfDices == 3) ? "hidden" : "visible"
-        }
-      >
-        {diceOne == diceTwo ? "🎲Doublet🎲" : "-"}
+      <h2 className={NumbOfDices == 1 ? "hidden" : "visible"}>
+        {diceOne == diceTwo &&
+        diceOne == diceThree &&
+        diceTwo == diceThree &&
+        NumbOfDices == 3
+          ? "🎲Triplet🎲"
+          : (diceOne == diceTwo) |
+              (diceOne == diceThree) |
+              (diceTwo == diceThree) && NumbOfDices == 2
+          ? "🎲Doublet🎲"
+          : "-"}
       </h2>
     </>
   );
