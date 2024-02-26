@@ -161,7 +161,7 @@ function App() {
           (NumbOfDices == 1) | (NumbOfDices == 3) ? "hidden" : "visible"
         }
       >
-        {diceOne == diceTwo ? "🎲Doublet🎲" : " "}
+        {diceOne == diceTwo ? "🎲Doublet🎲" : "-"}
       </h2>
     </>
   );
