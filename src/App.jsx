@@ -3,6 +3,7 @@ import dices from "./Components/Dices.jsx";
 import "./App.css";
 import Select from "react-select";
 import { ImgDices } from "./Components/imgDices.jsx";
+import { Description } from "./Components/Description.jsx";
 
 function App() {
   const optionsDices = [
@@ -155,21 +156,14 @@ function App() {
       >
         Roll The Dice
       </button>
-      <h1>Total : {sumTotal()}</h1>
-      <h2 className={NumbOfDices == 1 ? "hidden" : "visible"}>
-        {diceOne == diceTwo &&
-        diceOne == diceThree &&
-        diceTwo == diceThree &&
-        NumbOfDices == 3
-          ? "🎲Triplet🎲"
-          : diceOne == diceTwo && NumbOfDices == 2
-          ? "🎲Doublet🎲"
-          : (diceOne == diceTwo) |
-              (diceOne == diceThree) |
-              (diceTwo == diceThree) && NumbOfDices == 3
-          ? "🎲Doublet🎲"
-          : "-"}
-      </h2>
+
+      <Description
+        sumTotal={sumTotal}
+        NumbOfDices={NumbOfDices}
+        diceOne={diceOne}
+        diceTwo={diceTwo}
+        diceThree={diceThree}
+      />
     </>
   );
 }
