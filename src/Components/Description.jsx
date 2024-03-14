@@ -23,7 +23,7 @@ export const Description = ({
               (diceOne == diceThree) |
               (diceTwo == diceThree) && NumbOfDices == 3
           ? "🎲Doublet🎲"
-          : "-"}
+          : "🎲"}
       </h2>
     </div>
   );
